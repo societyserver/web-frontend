@@ -28,6 +28,13 @@ angular.module('steam',
       requireLogin: false
     })
 
+    .state('activate', {
+      url: '/activate/:userid/:activationcode',
+      templateUrl: '/templates/activate.html',
+      controller: 'ActivationCtrl',
+      requireLogin: false
+    })
+
     .state('workarea', {
       url: '/',
       requireLogin: true,
