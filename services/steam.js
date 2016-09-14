@@ -1,14 +1,6 @@
-/**
- * Created by chanaka on 7/1/16.
- */
-(function() {
-    var services;
+angular.module('steam')
 
-    services = angular.module('steam-service', []);
-
-    services.value('version', '0.1');
-
-    services.factory('steam', function($http, localStorageService) {
+.factory('steam', function($http, localStorageService) {
         var baseurl, handle_request, headers, loginp, restapi;
         baseurl = 'http://steam.realss.com/';
         restapi = baseurl + 'scripts/rest.pike?request=';
@@ -73,5 +65,3 @@
             }
         };
     });
-
-}).call(this);
